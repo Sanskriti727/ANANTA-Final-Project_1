@@ -1,0 +1,43 @@
+/* --- 1. FONT IMPORTS (Ensure these links are working) --- */
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lora:ital,wght@0,400;0,700;1,400&family=Poppins:wght@400;600&display=swap");
+
+/* --- 2. TAILWIND DIRECTIVES --- */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* --- 3. CUSTOM UTILITY CLASSES --- */
+body {
+  font-family: "Lora", serif;
+  line-height: 1.6;
+}
+.font-cinzel {
+  font-family: "Cinzel", serif;
+}
+.font-lora {
+  font-family: "Lora", serif;
+}
+
+/* The custom Diyā Glow shadow (Marigold color) */
+.shadow-diya {
+  box-shadow: 0 0 15px rgba(255, 179, 0, 0.4), 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Base style for premium cards */
+.card-premium {
+  @apply bg-white border border-[#D4A756]/30 shadow-lg transition-all duration-300;
+}
+
+/* Add the 'float' keyframes needed for the Home.js testimonial card */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
